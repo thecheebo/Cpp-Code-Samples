@@ -2,4 +2,10 @@
 
 Feel free to suggest any additional items.
 
+Good links:
+
+Why we need virtual functions:
+
+https://stackoverflow.com/questions/2391679/why-do-we-need-virtual-functions-in-c
+
 Thanks for looking!
