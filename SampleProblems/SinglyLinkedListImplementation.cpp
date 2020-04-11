@@ -27,3 +27,15 @@ List<int> theList;
     theList.Remove();
     theList.Head();
 }
+
+The running time's of this code are:
+List<int> theList;
+  for (int i = 1; i <= n; i++)  
+    theList.InsertAfter(i);  // O(n) time for as large as N, it will iterate through the entire loop
+  theList.Head();  // O(1) time as there is an attribute containing a pointer to the head node.
+  int len = theList.Length();  // O(1) time as the length is kept as an attribute
+  for (int i = 1; i < len; i++) { 
+    cout << theList.Retrieve() << endl;// O(n) time for as large as N, it will iterate through the entire linked list
+    theList.Remove();  // O(1) time as no traversal is needed.
+    theList.Head();  // O(1) time as no traversal is needed as the current node is set to head.
+}
