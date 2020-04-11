@@ -13,4 +13,16 @@ Vectors:
 
 http://www.cplusplus.com/reference/vector/vector/vector/
 
+Red Black Trees:
+
+https://www.youtube.com/watch?v=nMExd4DthdA
+
+building and rotations pt 2.
+
+https://www.youtube.com/watch?v=v6eDztNiJwo
+
+Red Black Tree 3 - Classes
+
+https://www.youtube.com/watch?v=-qjrcxVmf2Q&t
+
 Thanks for looking!
