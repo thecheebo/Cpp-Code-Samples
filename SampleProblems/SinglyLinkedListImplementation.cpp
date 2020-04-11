@@ -39,3 +39,11 @@ List<int> theList;
     theList.Remove();  // O(1) time as no traversal is needed.
     theList.Head();  // O(1) time as no traversal is needed as the current node is set to head.
 }
+
+The running time's of this code are:
+List<int> theList;
+  for (int i = 1; i <= n; i++) // // O(n) time, looping through n
+theList.InsertBefore(i);  // O(1) time as marker is set
+theList.Tail(); //  O(1) time as there is always a marker
+theList.Remove(); // remove is O(n) as we are at the tail and need to go back through O(n)
+
