@@ -54,3 +54,8 @@ the template function above, to print a 1 if the above list is a palindrome and 
 not. (It is not, but let the template function decide that.) Note that no iterators are
 declared yet; you will need to do that yourself, if you decide you need iterator variables.
 (6 points)
+                                                       
+list<int>iterator it1, it2;
+it1 = theList.begin();
+it2 = theList.end();
+count <<isPalindrome(it1,it2) <<endl;
