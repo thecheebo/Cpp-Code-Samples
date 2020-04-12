@@ -248,7 +248,113 @@ this case and justify that it fixes the problems we have without causing new one
          1b 5b 7b  9b
                     \
                      10r 
-                  
+
+(a) If you want to remove some value from a min-heap – not necessarily the minimum value,
+just some random value from the heap – one way you could go about this would be to
+decrease the priority of the value so that it rises to the top of the heap – i.e. decrease the
+priority of the value so that it is the minimum value in the heap – and then perform a
+DeleteMin operation. Assuming you already know where the value you want to remove
+is located in the min-heap, what would be the order of growth of the running time of
+the above removal procedure? Express your answer in big-O notation and justify your
+answer.
+
+   To decrease the priority of a value and percolate it to the top would potentially be the
+same as the cost of insertion – i.e. the cost of swapping a value upward from the deepest
+level of the heap to the root. That cost is O(lg V ). And a delete min is also O(lg V ).
+So total, the cost of this operation will be O(lg V ).
+  
+   As you return from the BST recursive calls (after doing BST insert or BST remove), at
+each node there are three things that need doing:
+      i. Recalculate the height of the node, by reading the heights of the two children,
+      choosing the maximum of those two heights, and adding 1. Given a pointer to a node,
+      you can access the node’s children in constant time (ptr->left and ptr->right),
+      and since the height is stored in the node itself, once you have a pointer to a node
+      you can retrieve its height in constant time (ptr->left->height, for example).
+      So reading the heights of the two children is constant time, and the rest is just
+      arithmetic, which is also constant time.
+         ii. Recalculate the balance of the node – that, again, is just arithmetic on the heights
+         of the child nodes, and we’ve already established that arithmetic on the heights of
+         the child nodes can be done in constant time.
+            iii. If the balance is illegal, perform the appropriate rotation. Comparing the balance
+            from (2) to +2 or -2 is constant, decding what rotation to perform will be constant
+            (because you are just reading the heights of the children and grandchildren, all of
+            which are reachable in constant time), and each rotation is a constant time operation,
+            so no matter which one you do, rotation takes constant time.
+All three of those steps are constant time, so we spend a total of constant time at this
+node. Since we have O(lg n) levels to move upward through as we return from recursive
+calls, the total work will be the number of levels multiplied by the time spend on each
+level, which will be O(lg n) times O(1), or O(lg n).
+   
+
+You have the following two standard node classes (which are publicly accessible and not
+encapsulated in another class):
+class ListNode {
+   public:
+      int element;
+      ListNode* next;
+};
+class TreeNode {
+   public:
+      int element;
+      TreeNode* left;
+      TreeNode* right;
+};
+Write a function LevelOrderToTree. The function should take as parameter a pointer to
+a ListNode, which is the first element of a list that represents the level-order traversal of a
+perfect binary tree. This function should reproduce the binary tree from the level-order listing
+received as a parameter. That is, LevelOrderToTree should return a TreeNode pointer which
+will be the root of a perfect binary tree such that, if a level-order traversal is run on it, it will
+yield the same listing as the one received as parameter. If the parameter ListNode pointer
+is NULL, the the returned TreeNode pointer should also be NULL.
+You have one Queue available to you to use as a local variable, if you wish.
+   
+
+//std::queue<int> q;
+// PARAMETER -- list node - points to 1st element of a list
+// that list is a L-O traversal of a perfect binary tree
+// FUNCTION -- reproduce THAT binary tree from L-O list
+// RETURN -- return root to Perfect Binary tree, if L-O order run then returns the parameter
+// NOTES -- If pointer fed is null, then return null
+   
+//      
+      traverse through list, count size.   
+     n^2-1 =3, 7, 15, 31, 63 etc..
+     divide /2 int divide. = where binary node is. 
+      for (i=0, i < binaryheadlocation; i++)
+         heed->= head.next;
+   1 ,2 ,3 , 4, 5, 6 ,7 
+   
+      
+      
+      
+   TreeNode* LevelOrderToTree(ListNode* head) {
+      1       
+    2   3 
+   4 5 6 7      
+   if head= null
+      return null
+   Treenode rootnode = head;  //establish root node
+   rootnode->element = head->element  //establish node data  = list data
+   
+   left node
+   right node
+   while head->next != null  // while list .next is not null (iterate)
+       head = head->next  //head is now the next element
+       Treenode* nextleftnode; //create a new left node.
+       nextleftnode->element = head.element  //assign the next element into new node
+       rootnode->left = nextleftnode;
+      
+       head = head->next  //head is now the next element
+       Treenode* nextleftnode; //create a new right node.
+       nextrightnode->element = head.element  //assign the next element into new node
+          
+       rootnode->right = nextrightnode;
+       
+      
+       
+   
+       
+   
                   
             
              
