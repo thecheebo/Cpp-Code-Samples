@@ -137,15 +137,30 @@ class TreeNode {
   list<TreeNode*> subtrees;
   };
 TreeNode* BreadthFirstSpanningTree(int** graph, int n) {    
+  Queue<TreeNode*> nodes;
+  list of where we are 0 to n
+  make new node root
+  set root to be zero, any
+  add root to stack
+  move up mark to 1
+  while (!nodesqueue.empty())) {
+    dequeue first node and set it as temp
+    set the index as temp vertex number of index
+      for col 0
+        for col index if
+ 
+    
   
   
-
-    
-    seen list
-    add first to queue
-    
-    while queue is not empty
-      
-      pull dequeue first node
-      
-      seen
+5. [Converting to undirected - 15 points].
+Suppose you have a directed weighted graph of n vertices, where the vertex numbers are 1
+through n, and the graph implementation is an adjacency list. The adjacency list is represented with an Array, indexed from 1 to n, of pointers to the following type:
+class EdgeNode {
+public:
+int index; //index of target vertex
+int weight; //weight of edge
+EdgeNode* next; // ptr to next edge
+};
+         
+  void ConvertToUndirected(Array<EdgeNode*>& graph) {
+  
