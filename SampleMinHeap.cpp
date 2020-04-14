@@ -149,6 +149,13 @@ int main() {
     heap.insert(rand() %100);
     heap.printHeap();
       std::cout <<std::endl;
+      
+      
+      
+
   }
+    heap.extractMin();
+  heap.printHeap();
+
   return 0;
 }
