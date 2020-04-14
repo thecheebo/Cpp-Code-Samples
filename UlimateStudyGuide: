@@ -1,0 +1,32 @@
+Source: https://www.youtube.com/watch?v=ID00PMy0-vE
+
+
+
+Disjoint-Set
+
+Using union by rank and path compression:
+
+Data structure that supports 3 operations
+
+3 Functions:
+
+MakeSet - is operation a 1 set with 1 item
+
+union- take two sets and merge into 1 set
+
+findSet - operation to return a identiy of a set which is usually an element in a set that acts as a represative of a set
+
+Use:
+
+Kruskal Algo
+
+Find cylce in undirected set.
+
+Two implementation
+- union by rank and path compression
+
+Node {
+int rank
+int data
+Node Parent
+}
