@@ -12,3 +12,353 @@ was fed in as a parameter.
 
 (b) In a “perfect” skiplist, we expect to never have to traverse forward more than one node
 on any level. Why is this?
+
+That is because we only go down, we check if the the next stop is larger then our current item we are 
+looking for, if it is, we go down a level and go right.
+
+(c) In a perfect binary tree that is also a binary search tree, where is the median value of
+the tree located? Justify your answer.
+
+The median is defined as: denoting or relating to a value or quantity lying at the midpoint 
+of a frequency distribution of observed values or quantities. So in a perfect binary tree, all the 
+leafs are in the same row, so there is an equal number of nodes on the left and right side. that means
+the median value will aways be the root node.
+
+(d) You insert the values 1, 6, 2, 5, 3, and 4, in that order, into an empty red-black tree.
+Counting a “double rotation” as one rotation, how many total rotations are needed over
+the course of these six insertions?
+
+black aunt - rotate - color flip
+ black
+   /\
+red  red
+
+red aunt color flip
+
+   red
+   / \
+ black black
+
+example
+
+  3.b
+    \ 
+    5.b
+    / \
+   N.B 7.r
+       /
+     6.r   =  ROTATE FIRST
+     
+  3.b
+    \ 
+    6.r
+    / \
+   5.b 7.r  = NOW COLOR rotation
+
+     
+  3.b
+    \ 
+    6.b
+    / \
+   5.R 7.r  = DONE
+     
+     
+
+
+      1r
+      
+      1b
+     / \
+    n.b n.b
+    
+      1b
+     / \
+    n.b 6.r
+    
+      1b
+        \
+       6.r
+       /
+      2.r
+     
+     Right left rotate
+     
+      2.b
+     / \
+    1.r 6.r             = 1 rotation
+    
+     2.b
+     / \
+    1.r 6.r
+        /
+       5.r 
+       
+     2.r
+     / \
+    1.b 6.b
+        /
+       5.r 
+       
+     2.b
+     / \
+    1.b 6.b
+        /
+       5.r 
+       
+       
+      2.b
+     / \
+    1.b 6.b
+        /
+       5.r 
+       /
+      3.r    = black aunt rotate 
+      
+      
+      2.b
+     / \
+    1.b 3.b
+        / \
+       5.r 6.r  = black red red color flip  = 2nd rotate
+       
+     2.b
+     / \
+    1.b 3.b
+        / \
+       5.r 6.r  = black red red color flip
+       /
+      4.r 
+    
+      2.b
+     / \
+    1.b 3.r
+        / \
+       5.b 6.b  = black red red color flip
+       /
+      4.r 
+      
+answer is 2 rotates.
+
+(e) How do we “mark a vertex known” in the heap implementation of Dijkstra’s Algorithm
+– that is, how do we ensure that a vertex we have selected in one step will never again
+be selected in a future step – and how long does this process take, for one vertex?
+
+1) Initialize distances of all vertices as infinite.
+
+2) Create an empty priority_queue pq.  Every item
+   of pq is a pair (weight, vertex). Weight (or 
+   distance) is used used as first item  of pair
+   as first item is by default used to compare
+   two pairs
+
+3) Insert source vertex into pq and make its
+   distance as 0.
+
+4) While either pq doesn't become empty
+    a) Extract minimum distance vertex from pq. 
+       Let the extracted vertex be u.
+    b) Loop through all adjacent of u and do 
+       following for every vertex v.
+
+           // If there is a shorter path to v
+           // through u. 
+           If dist[v] > dist[u] + weight(u, v)
+
+               (i) Update distance of v, i.e., do
+                     dist[v] = dist[u] + weight(u, v)
+               (ii) Insert v into the pq (Even if v is
+                    already there)
+               
+5) Print distance array dist[] to print all shortest
+   paths. 
+   
+   The time complexity remains O(ELogV)) as there will be at most O(E) vertices in priority queue and O(Log E) is same as O(Log V)
+   
+6) Given a graph that is both undirected, and connected (i.e. given any two vertices, there
+is a path between them in the graph), can breadth-first-search ever produce a spanning
+forest instead of a spanning tree? Justify your answer.
+
+No by defition of a connected graph, the BFS, will evntually see every vertice and connect it to make a MST, it puts it in a queue, and
+no matter what will eventualyl get there. it can keep track of seen nodes either with a set, or each node can be marked as seen.
+
+7)
+Consider a hash table where h(x) = x mod 11 and h2(x) = 5 − x mod 5. Insert the
+values 80, 58, 30, 5, 21, and 27, in that order, into the hash table. Use double hashing
+to resolve collisions. We have provided the relevant values of the two hash functions, in
+the table below.
+
+        80 58 30 5 21 27
+h(x)    3  3  8  5 10 5
+h2(x)   5  2  5  5 4  3
+
+
+0 1 2 3 4 5 6 7 8 9 10
+
+8) How many “array nodes” (as opposed to leaves containing info records for our keys,
+rather than arrays) would there be in a Patricia Tree containing the words cart, car,
+carthage, cardio, and cartoon?
+
+no idea what a patricia tree is.
+
+
+/*********************************************************************************
+9) Explain convincingly that a red-black tree removal will never require more than three
+single rotations. (You can assume anything we said in class about the individual cases
+of the algorithm is true; for example, if some case involves one rotation, you can simply
+state that such a case involves one rotation, without justifying it.)
+
+unfinished
+*********************************************************************************/
+
+
+10)(j) For the given graph, run Prim’s algorithm, indicating in the table below the distances at
+each vertex at the end of each step (dv), and whether or not the vertex has been marked
+known yet at the end of each step (kv).
+
+done many times.
+
+
+2. [Analysis – 40 points (10 points each)].
+(a) You have a pointer head to a doubly-linked list of n nodes, made up of nodes of the
+ListNode class on page 19. You need to do three things: (1) explain what the following
+code does, (2) tell us what the the order of growth of the worst-case running time of
+the following code is (in big-O notation), and (3) explain your answer to (2) in enough
+detail to be convincing.
+
+// you are given the pointer ‘‘head’’ to a list of size n
+ListNode* temp = NULL;
+ListNode* latestHead = NULL;
+while (head != NULL) {
+  ListNode* toEnd = head;        // points to end to the head as well.
+  while (toEnd->next != NULL)   // while head or to ends next is not null, iterate to the end.
+    toEnd = toEnd->next;       //we are now have a pointer to the last tail node, which is to end
+          if (toEnd->prev != NULL)       
+            toEnd->prev->next = NULL;   //points the previous last tail node to now null
+          else
+            head = NULL;                 // otherwise just make head null and delete head (GARBAGE CLEAN UP)
+            
+            //head is now hull dont use it anymore
+            
+            
+  toEnd->prev = temp;           // to end poitns to NEW tail. TEMP IS NOW NEW TAIL
+  if (temp != NULL)              // if last tail is not a null value
+    temp->next = toEnd;          
+  else
+    latestHead = toEnd;
+  temp = toEnd;                   // point itself to the end
+}
+
+this is done in O(n^2) time. iterate through from head to tail, which is at least n times. and delete the tail,
+then point the temp to self. checks if head is not null, head is not null, this just keeps deleting the last node.
+
+
+(b) Imagine you have a red-black tree, and at each node of this red-black tree, you have an
+array and an integer. The red-black-tree is arranged by the integer in each node (i.e.
+that integer is the search key for the tree, i.e. an in-order traversal of the red-black-tree
+would give you the integers in numerical order). You look up a pair of numbers in this
+structure, by finding the first number of the pair in the red-black tree, and then once
+you have found that number in some red-black tree node, you search the array at that
+node for the second number in the pair. If you have n nodes in the tree, and each array
+is of size m, what is the order of growth of the worst-case running time of the above
+procedure? Express your answer in big-O notation, and explain your answer in enough
+detail to be convincing
+
+  each array, assumign the search is linear, is then done at M time. a regualr n search in red balck is log n so if its one search
+  m + log n
+
+(c) Suppose you want to add a vertex to graph of V vertices and E edges. Assume that this
+graph is implemented using an adjacency matrix of exactly the right size needed for the
+graph. Express (using big-O notation) the order of growth of the worst-case running
+time of this operation, in terms of V and E. Explain your answer in enough detail to be
+convincing.
+
+it would take V^2, because you'd need to make it now from VxV to V+1xV+1, so you'll have to duplicate it and set each row to 0 or 1, or some #
+that represents the len of E
+O(v^2)
+
+(d) Explain why the time to lookup a value in a trie does not depend on how many values
+there are in the trie. 
+i dont know what a trie is.
+
+3. [Range Removal - 20 points].
+You have the ListNode class seen on page 19 of this exam. You want to write a function
+RangeRemoval that will have three parameters. The first is a reference to a pointer to the
+starting node of a doubly-linked list made up of the above nodes. The next variable of the
+last node and the prev variable of the first node are both NULL, and the list is sorted from
+lowest to highest element. The second and third parameters are a low and high value defining
+a range of integers (you can assume the second parameter is less than or equal to the third
+parameter).
+Your task is to remove all values in the list, whose elements are between the second and third
+parameters, inclusive, from the parameter list, and to return a sorted list of those removed
+values. For example, if the list were of size 12 and was as follows:
+head->0->1->2->4->5->7->8->9->11->12->15->17->NULL
+and your second and third parameters were 6 and 12, respectively, then the parameter list
+becomes:
+head->0->1->2->4->5->15->17->NULL
+and you return a pointer to the start of the list:
+---->7->8->9->11->12->NULL
+where the first node’s prev and the last node’s next variables are both NULL and the values
+are sorted.
+You are NOT allowed to write to the element variable of any of the nodes; you must complete
+this method by rearranging the nodes themselves. When you are done, the parameter list
+should still be doubly-linked, the next variable of the first node and the prev variable of the
+last node should both point to NULL, and the parameter should point to the new front node
+of the list.
+ListNode* RangeRemoval(ListNode * & head) {
+// your code goes here
+
+5. [Dijkstra’s Algorithm - 20 points].
+You have the following classes:
+
+
+We can implement graphs using the adjacency list implementation, by having a variable
+theGraph of type Array<VertexRecord> that is indexed from 1 to theGraph.size(). In
+this graph, the vertices have indices from 1 to theGraph.size(), and all edge weights are
+positive.
+Your task is to run Dijkstra’s algorithm on such a graph. That is, want to write a function
+dijkstra that has two parameters. The first is a reference to a variable theGraph as described
+above, and the second is an integer between 1 and theGraph.size() inclusive, which is the
+index of the source vertex. The distance and known variables in each VertexRecord object
+are initially not initialized in any way, so you will need to take care of that yourself. You may
+use those two variables however you see fit, but at the end of your function, each VertexRecord
+should store the minimum distance from the source to that vertex, in the distance variable
+for that vertex. You should use the “table implementation” to implement this algorithm.
+
+// your code goes here
+
+
+class EdgeNode { 
+  public: public:
+    int target; // index of target vertex 
+    int weight; // weight of edge 
+    EdgeNode* next; // next node in list 
+}; 
+
+
+class VertexRecord {
+int distance;
+int known;
+EdgeNode* edgePtr;
+};
+
+void dijkstra(Array<VertexRecord> & theGraph, int source) {
+
+
+int main {
+
+return 0;
+}
+
+
+//whatr do i know
+// use adjacency list
+// all edge weights positeve, weighted non directed graph
+// you get an index of source vertex
+teh distance adn known variables in each vertex record  are not initailized - do it yourself
+each vertex record needs to store minimum distance from the source to THAT vertex.  IN the distance var
+use a table implementation to implemnt this algorithm
+
+
+
+
+
