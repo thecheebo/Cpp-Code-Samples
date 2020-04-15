@@ -1,0 +1,14 @@
+Exam location: https://courses.engr.illinois.edu/cs225/fa2018/exams/practice/sample2final.pdf
+
+1. [Algorithms - 60 points (6 points each)].
+(a) Explain how the middle node of a singly-linked list can be removed in constant time,
+given a pointer to that node.
+
+There could be a method within the singly-linked list that delete nodes where the pointer is
+given that pointer always points to the one before by setting the node to be deleted to temp. Then
+moving the pointers next node to the temp's next, thus repairing the chain. Then deleteing the node that 
+was fed in as a parameter.
+
+
+(b) In a “perfect” skiplist, we expect to never have to traverse forward more than one node
+on any level. Why is this?
