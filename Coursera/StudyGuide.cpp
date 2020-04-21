@@ -1,6 +1,63 @@
+***** Part 2 - C++ OOP *****
+
+***** Week 1 *****
+C++ Classes
+C++ STD/STL
+
+***** Week 2 *****
+Stack Memory and Pointers
+Heap Memory
+Headers and Source Files
+Compiling a C++ Program
+Type Casting
+
+***** Week 3 *****
+Class Constructors
+Copy Constructors
+Copy Assignment Operator
+Variable Storage
+Class Destructor
+
+***** Week 4 *****
+Template Types
+Tower of Hanoi
+Templates and Classes
+Inhereitance
+
+
+***** Part 2 - Ordered Data Structures *****
+
+***** Week 1 *****
+Arrays
+Linked Memory
+Array and List Operators
+Queue
+Stack
+
+***** Week 2 *****
+Tree Terminology
+Binary Tree
+Tree Traversal
+BST
+BST Analysis
+
+***** Week 3 *****
+Balanced-BST
+AVL
+B-Tree
+
+
+***** Week 4 *****
+
+Heap Intro
+Heap-Insert
+Heap-RemoveMin
+Heap-BuildHeap
+Heap-runTime
+
+
+
 ***** Part 3 - Unordered Data Structures *****
-
-
 
 ***** Week 1 *****
 
