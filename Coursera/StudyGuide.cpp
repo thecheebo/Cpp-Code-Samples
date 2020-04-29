@@ -44,7 +44,7 @@ BST Analysis
 ***** Week 3 *****
 Balanced-BST
 AVL
-B-Tree
+B-Tree - [ Completed ]
 
 
 ***** Week 4 *****
