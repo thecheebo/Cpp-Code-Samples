@@ -1,3 +1,15 @@
+(a) Give an example of a undirected, weighted graph that has two edges of equal weight, for
+which there is still a unique minimum spanning tree.
+  
+There are many examples of such a graph. As a trivial example, any undirected, weighted
+graph that is really a tree, and has two equal-weight edges, has a unique minimum
+spanning tree – the entire graph itself is the only possible spanning tree, since the graph
+itself is a tree
+
+
+
+
+
 4. [Breadth-First Spanning Tree – 15 points].
 You are given the following class:
 class TreeNode {
@@ -48,3 +60,5 @@ marks[col] = 1;
 }
 return root;
 }
+  
+  
