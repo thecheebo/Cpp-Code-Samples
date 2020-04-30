@@ -52,3 +52,15 @@ returnVal.third = right.third;
 return returnVal;
 }
 }
+
+*** QUESTION
+Explain why we can implement a complete tree using an array – that is, explain why we
+don’t lose information when we get rid of the pointers, i.e. explain why it is that, given
+an array, we can always produce the corresponding complete tree.
+  
+Because of the way a complete tree is defined, the number of nodes defines the structure
+– that is, every complete tree of N nodes, has those nodes in the same place as every
+other complete tree of N nodes. And the array is just the level order traversal of the
+complete tree. So, given an array with N elements, we know exactly what structure the
+tree is supposed to have, and we know how that tree was traversed to produce the array,
+meaning we know what array cells correspond to what nodes in the tree.
