@@ -264,4 +264,32 @@ Which situation does not use the copy constructor?
  
  a maybe d.
  
+ MC5 (2.5pts)
+Consider the following code:
+class flower {
+private:
+int petals;
+public:
+flower(){petals = 6;}
+void setPetals(int newPetals) {petals = newPetals;}
+virtual int getPetals() { return petals; }
+void displayPetals();
+};
+class daisy : public flower {
+public:
+daisy(){setPetals(20);}
+int getPetals(){return 6 * flower::getPetals();}
+};
+void flower::displayPetals() {
+cout << getPetals() << endl;
+}
+int main() {
+flower f;
+daisy d;
+f.displayPetals();
+d.displayPetals();
+return 0;
+}
+Which of the following best describes the output?
+(b) 6 and then 120
  
