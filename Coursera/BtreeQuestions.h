@@ -1,4 +1,13 @@
-Which one of the following is NOT a valid reason to choose the B-Tree representation over a standard AVL binary search tree?
+MC5 (2.5pts)
+Suppose an order m B-tree contains n items. In the worst-case, how many CPU operations
+would be required to search the tree for a specific key?
+(a) O(log2 n)
+(b) O(logm n)
+(c) O(m log2 n)
+(d) O(m log2 m)
+(e) O(m logm n) <-- 
+
+QUESTION: Which one of the following is NOT a valid reason to choose the B-Tree representation over a standard AVL binary search tree?
 
 
 B-Trees have better algorithmic "Big-O" run-time complexity for the find operation. *** FALSE***
