@@ -14,6 +14,19 @@ is no way to arrange the two nodes on the other side to form a subtree of height
   
 Question 3) 
 
+  (c) Insert the integers 1 through 6, in that order, into an AVL tree. Draw the resulting
+tree. How many rotation operations, total, did you perform? Count a “double rotation”
+operation as one rotation operation.
+3 rotations total
+
+   4
+  / \
+ 2   5
+/ \   \
+1 3    6
+  
+  
+  
 Question 4) 
 void AVLTree::rotateLeft(AVLTreeNode * & node) {
 // no need to check for conditions, as they are supposed
