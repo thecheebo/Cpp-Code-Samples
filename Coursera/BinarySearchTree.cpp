@@ -1,3 +1,8 @@
+Question:
+
+(b) If you have a complete tree of 17 nodes, how many nodes are on the deepest level?
+2
+
 MC3 (2.5pts)
 Suppose that we have numbers between 1 and 1000 in a binary search tree and we want to
 search for the number 363. Which of the following sequences can not be the sequence of nodes
