@@ -28,19 +28,24 @@ Any node that is not the root or a leaf holds at least half of the total number 
 All leaf nodes are at the same level of the B-Tree.
 
 
-
+***  Question ***
 If a B-Tree is completely filled, meaning every node holds its maximum number of keys and all non-leaf nodes has
 the maximum number of children, then what happens when an additional key is inserted into the B-Tree?
 
 
-***  Question ***
+***  Answer ***
 After searching for the leaf node where the new key should go, the leaf is split in half as two separate leaf nodes,
 and then the middle value is thrown up to the layer above as an inserted key, and this insertion and rebalancing
 repeats until a new root key rises to the top, which adds a layer to the tree.
+  
+  
+  
+***  Question ***
 
   (e) Explain convincingly that for a B-Tree of order b (remember, we said the order, b, would
 always be an odd number), splitting a B-tree node during an insertion must always leave
 an extra index value that could be moved into the parent of the split node.
+  ***  Answer ***
 The maximum number of children a B-tree node is allowed to have is b children, and you
 always have one fewer indices than children. So, if the node is overflowing, it means you
 have b+1 children and thus b indices. When you split that, half the children go to each
