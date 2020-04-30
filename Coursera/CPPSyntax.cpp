@@ -146,3 +146,11 @@ I. myVar is a dynamic array of integer pointers.
 II. myVar is a pointer to a dynamic array of integers.
 III. myVar is a dynamic array of dynamic arrays of integers.
 
+
+ We need to write our own destructor (instead of using the default one) when...Answer:c
+
+(c) we have allocated dynamic memory in our constructors
+
+NOT :
+(a) we have private members that are pointers.
+(b) we have private members that are arrays.
