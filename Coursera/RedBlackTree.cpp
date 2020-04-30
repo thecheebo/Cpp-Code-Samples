@@ -13,3 +13,29 @@ colored the root red yet ourselves. And the root is black at the start of every 
 operation. So the case described above simply cannot happen – if we hadn’t reached
 the root yet, it would still be black for certain, so there can be no case where we are
 inspecting a node and it has a red root for a parent
+
+
+(e) Explain the “repair case” of the Red-Black Tree removal algorithm (the “repair case”
+was case 2b, where the node we labelled “x” had a black sibling and that black sibling
+had a red child in the child position further from “x’). That is, explain what we do in
+this case and justify that it fixes the problems we have without causing new ones.
+If the parent of X is black, and we perform a single rotation on the parent toward X,
+and color the new subtree root (S below) and its two children (P and C below) black:
+  P        S
+/ \       / \
+X  S       P   C
+  / \      / \   \
+   L C    X  L     R
+      \
+       R
+Then we used to have one black node on the way to X, namely, P, but now we encounter
+both S and P on the way to X. On the other hand, there are still two black nodes on the
+way to L, two black nodes on the way to C’s left child, and two black nodes on the way
+to R, since previously, P and S were black and C was red, and now, S and C are both
+black. In other words, we add one black node to all paths containing X, but the paths
+that do not contain X have the same number of black nodes as before.
+Similarly if P is red - same rotation, but S becomes red and P and C (as before) become
+black. The same analysis as above is true, but since S is red instead of black, all paths
+have one fewer black node than they did in the above paragraph. Nevertheless, we have
+added one black node to the paths through X, while not changing the black heights of
+the paths that do not travel through X.
