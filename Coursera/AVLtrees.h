@@ -1,8 +1,20 @@
-Which of the following is the strongest valid statement made about AVL trees?
+Question 1) Which of the following is the strongest valid statement made about AVL trees?
 
 (b) They are height-balanced trees
 
+Question 2) The AVL Tree balance property was that for any node, the two subtrees of that node
+differed by at most 1 in height. Why not 0? That is, explain convincingly that requiring
+each node to have two subtrees of equal height would be problematic.
+  
+  
+Such a requirement simply isn’t possible to meet for many trees. For example, if you
+have four values, one must be at the root, two values on one side of the root, and one
+value on the other side of the root. The side with one node is a subtree of height 0; there
+is no way to arrange the two nodes on the other side to form a subtree of height 0.
+  
+Question 3) 
 
+Question 4) 
 void AVLTree::rotateLeft(AVLTreeNode * & node) {
 // no need to check for conditions, as they are supposed
 // to be checked before calling this function
