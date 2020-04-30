@@ -57,3 +57,17 @@ int DistanceCheck(int** graph, int n) {
 delete[] marks;
 return (currVert == n);
 }
+
+
+(a) You are given a graph which is implemented by an adjacency matrix. This matrix has
+V rows and V columns, and represents a graph with V vertices and E edges. What is the
+order of growth of the worst-case running time for adding a vertex to the graph? Express
+your answer in Big-O notation and explain convincingly why your answer is correct.
+You would need to create a new 2-D array of V+1 rows and V+1 columns, copy the V
+2
+values from the old array into the new array, and then initialize the new column and
+row to 0. Copying the V^2 values will be constant-time each, since we are reading and
+writing to arrays; that means the copying costs are O(V^2) total. writing 0 into every
+cell in a row of length V+1 is O(V) time, as is writing 0 into every cell of a column of
+length V+1. Therefore the total time is O(V^2 + V + V ) which is O(V^2).
+
