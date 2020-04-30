@@ -304,3 +304,13 @@ public:
 // public portion of class definition here
 };
 (c) template<class T> train<T>::train(const train<T> & oldTrain)
+
+ 
+ int * const p = new int; // line 1
+const int q = 5;
+*p = q + q; // line 3  
+cout << *p << endl;
+delete p;
+p = NULL; // line 6  / here is the error
+
+(c) A single compiler error, on line 6
