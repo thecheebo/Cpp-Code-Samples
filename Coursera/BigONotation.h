@@ -25,3 +25,11 @@ then once we find it, access the AVL tree there and search it to get the column 
 would also be O(log n)). So we have O(log n) + O(log n) = O(log n).
 So the second way is the better of the two, since in order to find the value you need to acces
 *both* structures, and that total time will be better in the second implementation.
+  
+***QUESTION***
+Given an array-based implementation of a list of n elements, what is the worst case running
+time for inserting an element to an arbitrary position in the list?
+(a) O(1)
+(b) O(log n)
+(c) O(n)
+
