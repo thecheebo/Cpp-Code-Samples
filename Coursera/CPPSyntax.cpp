@@ -154,3 +154,100 @@ III. myVar is a dynamic array of dynamic arrays of integers.
 NOT :
 (a) we have private members that are pointers.
 (b) we have private members that are arrays.
+ 
+ 
+ question
+ Consider this prototype for a template function:
+template <class Item>
+void foo(Item x);
+What is the right way to call the foo function with an integer argument i?Answer: a or b
+(a) foo( i );
+(b) foo<int>( i );
+
+
+reference and address practice:
+#include <iostream>
+using namespace std;
+void myFun(int * x) {
+int *y = new int;
+cout << "y: " << y << endl;
+
+cout << "&y: " << &y << endl;
+
+cout << "x: " << x << endl;
+cout << "*x: " << *x << endl;
+cout << "y: " << y << endl;
+
+*y = 16;
+cout << "y: " << y << endl;
+cout << "*y: " << *y << endl;
+cout << "&y: " << &y << endl;
+
+cout << "x: " << x << endl;
+cout << "*x: " << *x << endl;
+cout << "&x: " << &x << endl;
+
+x=y;
+
+cout << "x: " << x << endl;
+cout << "*x: " << *x << endl;
+cout << "&x: " << &x << endl;
+
+delete y;
+
+
+}
+int main(){
+int i = 9;
+cout << "i: " << i << endl;
+cout << "&i: " << &i << endl;
+cout << "*&i: " << *&i << endl;
+
+myFun(&i);
+cout << i << endl;
+return 0;
+}
+
+
+another
+
+#include <iostream>
+using namespace std;
+void myFun(int * x) {
+  cout << "*x is " << *x << endl;
+    cout << "x is " << x << endl;
+x = new int;
+*x = 12;
+}
+int main(){
+int v = 10;
+cout << "&v is " << &v << endl;
+
+myFun(&v);
+cout << v << endl;
+return 0;
+}
+
+ &v is 0xfff000bdc
+*x is 10
+x is 0xfff000bdc
+10
+  
+  #include <iostream>
+using namespace std;
+void myFun(int & x) {
+  cout << "*x is " << &x << endl;
+    cout << "x is " << x << endl;
+
+x = 12;
+}
+int main(){
+int v = 10;
+cout << "v is " << v << endl;
+cout << "&v is " << &v << endl;
+
+myFun(v);
+cout << v << endl;
+return 0;
+}
+v is 12
