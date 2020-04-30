@@ -7,3 +7,43 @@ visited in the search?
 (c) 2, 399, 387, 219, 266, 382, 381, 278, 363
 (d) 925, 202, 911, 240, 912, 245, 363 < ---
 (e) 935, 278, 347, 621, 399, 392, 358, 363
+
+  
+  IntTriple Verify(TreeNode* ptr) {
+// we will use the other two variables of an IntTriple to hold
+// the min and max of the tree
+IntTriple returnVal;
+if (ptr == NULL) {
+returnVal.first = 1; // empty binary tree is a BST
+returnVal.second = 0; // min of empty tree
+returnVal.third = -1; // max of empty tree, it being < min
+// signals it was empty tree
+}
+else {
+IntTriple left, right;
+left = Verify(ptr->left);
+right = Verify(ptr->right);
+returnVal.first = 1; // assume it’s a BST unless we find otherwise
+returnVal.second = ptr->elem; // assume root value is min and max
+returnVal.third = ptr->elem; // unless we find otherwise
+if ((left.first == 0) || (right.first == 0))
+returnVal.first = 0; // not BST if subtrees not BSTs
+// if root < max of left subtree, or root > min of right subtree, not BST
+if (((left.second <= left.third) && (left.third > ptr->element)) ||
+((right.second <= right.third) && (ptr->element > right.second)))
+returnVal.first = 0;
+if (left.second <= left.third) { // if left subtree exists
+if (left.second < returnVal.second) // if smaller min, save it
+returnVal.second = left.second;
+if (left.third > returnVal.third) // if bigger max, save it
+returnVal.third = left.third;
+}
+if (right.second <= right.third) { // if right subtree exists
+if (right.second < returnVal.second) // if smaller min, save it
+returnVal.second = right.second;
+if (right.third > returnVal.third) // if bigger max, save it
+returnVal.third = right.third;
+}
+return returnVal;
+}
+}
