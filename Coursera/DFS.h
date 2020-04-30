@@ -14,3 +14,18 @@ must mean the neighbors of a vertex always get higher numbers than the vertex it
 since the higher numbers get assigned first and the neighbors receive numbers first. And,
 the definition of topological sort is that every vertex appears before its neighbors in the
 ordering – so we are done, since now every vertex has a lower number than its neighbors.
+
+  (b) What is the order of growth of the running time of depth-first search on a graph with V
+vertices and E edges? Express your answer in big-O notation and justify your answer.
+  
+Each call to depth-first search:
+• marks a vertex as “encountered”
+• performs constant-time work on each neighbor of that vertex (checking the neighbor
+to see if it has been marked )
+• performs constant-time work on all unmarked neighbors (starting up a depth-firstsearch stackframe for that vertex neighbor, and eventually returning from that call)
+And, since you only call depth-first-search on unmarked neighbors, you make one call
+to depth-first-search for every vertex. So, there is constant-time marking work for each
+vertex, or O(V ) total. There is constant-time work inspecting a neighbor and possibly
+starting (and later returning from) a depth-first-search call, for each neighbor, or, O(E)
+total (since the total number of neighbors equals the total number of targets of departing
+edges equals the total number of edges). Thus, the running time is O(V + E).
