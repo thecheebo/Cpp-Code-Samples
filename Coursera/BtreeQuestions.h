@@ -33,7 +33,20 @@ If a B-Tree is completely filled, meaning every node holds its maximum number of
 the maximum number of children, then what happens when an additional key is inserted into the B-Tree?
 
 
+***  Question ***
 After searching for the leaf node where the new key should go, the leaf is split in half as two separate leaf nodes,
 and then the middle value is thrown up to the layer above as an inserted key, and this insertion and rebalancing
 repeats until a new root key rises to the top, which adds a layer to the tree.
 
+  (e) Explain convincingly that for a B-Tree of order b (remember, we said the order, b, would
+always be an odd number), splitting a B-tree node during an insertion must always leave
+an extra index value that could be moved into the parent of the split node.
+The maximum number of children a B-tree node is allowed to have is b children, and you
+always have one fewer indices than children. So, if the node is overflowing, it means you
+have b+1 children and thus b indices. When you split that, half the children go to each
+half, so each half gets (b+1)/2 children, and since you always have one fewer indices
+than children, each half should also have ((b+1)/2)-1 indices. But, if each half has
+((b+1)/2)-1 indices, the two halves together have (((b+1)/2)-1) + (((b+1)/2)-1)
+indices, which equals b-1 indices. Yet, our node before the split had b indices. So, we
+know there is an index left over that was not placed in either of the two halves of the
+split.
