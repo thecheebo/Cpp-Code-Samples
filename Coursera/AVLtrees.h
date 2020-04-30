@@ -85,3 +85,32 @@ ptr->left = temp->right;
 temp->right = ptr;
 ptr = temp;
 // fix height
+
+  QUESTOITOINT*%*&%(@*(#&%
+  (b) Explain why it is that the rebalancing work performed by the AVL tree insert or remove
+is at most O(lg n) on a tree of height O(lg n). Your answer should be detailed enough to
+convince us you know what you are talking about. You don’t need to justify the steps
+of the algorithm here – simply indicate what those steps are and their running times –
+and indicate that those running times add up to what we claim they add up to.
+    
+As you return from the BST recursive calls (after doing BST insert or BST remove), at
+each node there are three things that need doing:
+i. Recalculate the height of the node, by reading the heights of the two children,
+choosing the maximum of those two heights, and adding 1. Given a pointer to a node,
+you can access the node’s children in constant time (ptr->left and ptr->right),
+and since the height is stored in the node itself, once you have a pointer to a node
+you can retrieve its height in constant time (ptr->left->height, for example).
+So reading the heights of the two children is constant time, and the rest is just
+arithmetic, which is also constant time.
+ii. Recalculate the balance of the node – that, again, is just arithmetic on the heights
+of the child nodes, and we’ve already established that arithmetic on the heights of
+the child nodes can be done in constant time.
+iii. If the balance is illegal, perform the appropriate rotation. Comparing the balance
+from (2) to +2 or -2 is constant, decding what rotation to perform will be constant
+(because you are just reading the heights of the children and grandchildren, all of
+which are reachable in constant time), and each rotation is a constant time operation,
+so no matter which one you do, rotation takes constant time.
+All three of those steps are constant time, so we spend a total of constant time at this
+node. Since we have O(lg n) levels to move upward through as we return from recursive
+calls, the total work will be the number of levels multiplied by the time spend on each
+level, which will be O(lg n) times O(1), or O(lg n)
