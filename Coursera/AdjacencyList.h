@@ -76,3 +76,20 @@ currentVert++;
 }
 return numOdd;
 }
+  
+  (b) You are given a graph which is implemented via an adjacency list. This adjacency list is
+of the kind we first discussed in class – i.e. an array of vertices, with each cell of the array
+pointing to a linked list of edge nodes. You want to find the vertex with the greatest
+number of departing edges. What will be the worst-case running time of this algorithm,
+in terms of V and E? Express your answer in big-O notation and explain convincingly
+why your answer is correct.
+The linked list of edge nodes that each cell of the array points to, is the list of departing
+edges for the vertex that cell represents. So another way to ask this question is, “Which
+array cell has the longest linked list?” That can be done by simply calculating the length
+of each linked list by traversing down the lists one by one – and the sum of the lengths
+of the lists is the sum of all departing edges in the graph (or, if it is an undirected graph,
+the sum of the lengths of the list is double the number of edges in the graph). So there’s
+O(E) work there. It’s also possible some vertices have no departing edges and yet we’d
+need to inspect those vertices anyway, so you’ve got the O(V ) traversal down the array
+to add in as well, since even though usually V < E, that won’t always be the case. So, the
+total run time involves looking at each array cell and each list node, once – or O(V +E).
