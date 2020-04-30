@@ -3,6 +3,17 @@ Which of the following is the strongest valid statement made about AVL trees?
 (b) They are height-balanced trees
 
 
+void AVLTree::rotateLeft(AVLTreeNode * & node) {
+// no need to check for conditions, as they are supposed
+// to be checked before calling this function
+AVLTreeNode* y = node;
+node = node->right;
+y->right = node->left;
+node->left = y;
+y->height = height(y);
+}
+
+
 You are given the AVLTreeNode class shown on page 8 of the exam. You want to write a
 function doubleRight that has one parameter and returns nothing. The parameter will be
 of type reference-to-pointer-to-AVLTreeNode. You can assume this parameter points to the
