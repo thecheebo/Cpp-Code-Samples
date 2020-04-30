@@ -24,3 +24,17 @@ cell. i.e., to summarize all this up, the IncreasePriory operation requires noth
 than taking the increased priorty value and percolating it downward in the same way
 you would do for DeleteMin or BuildHeap. And since the heap has height O(log n), this
 operation is at most O(log n).
+  
+  QUESTION &&&***
+  If you want to remove some value from a min-heap – not necessarily the minimum value,
+just some random value from the heap – one way you could go about this would be to
+decrease the priority of the value so that it rises to the top of the heap – i.e. decrease the
+priority of the value so that it is the minimum value in the heap – and then perform a
+DeleteMin operation. Assuming you already know where the value you want to remove
+is located in the min-heap, what would be the order of growth of the running time of
+the above removal procedure? Express your answer in big-O notation and justify your
+answer.
+To decrease the priority of a value and percolate it to the top would potentially be the
+same as the cost of insertion – i.e. the cost of swapping a value upward from the deepest
+level of the heap to the root. That cost is O(lg V ). And a delete min is also O(lg V ).
+So total, the cost of this operation will be O(lg V ).
