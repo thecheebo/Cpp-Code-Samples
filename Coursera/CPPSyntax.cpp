@@ -251,3 +251,17 @@ cout << v << endl;
 return 0;
 }
 v is 12
+ 
+ 
+ QUESTION
+ MC3 (2.5pts)
+Which situation does not use the copy constructor?
+(a) Calling a function that has only a reference parameter.
+(b) Calling a function that has only a value parameter.
+(c) Declaring a variable to be a copy of another existing object.
+(d) Returning a value from a function.
+(e) All of these situations use the copy constructor.
+ 
+ a maybe d.
+ 
+ 
