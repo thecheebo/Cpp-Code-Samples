@@ -25,9 +25,26 @@ operation as one rotation operation.
 / \   \
 1 3    6
   
+Question 4)
+  
+  In an AVL tree, why does storing the height of a subtree, in the root node of that subtree,
+improve the efficiency of the AVL rebalancing work (versus not storing the height at all)?
+  
+  answer
+We want to be able to recalculate the height of a node quickly, and yet, to calculate the
+height of a node, we would need to find the heights of both subtrees, so that we could
+compare the heights and do the appropriate arithmetic. If the height of every node is
+stored in that node, then given a pointer to a node, learning the heights of that node’s
+children is simply a matter of reading them from the child nodes – which is constant
+time. But if we need to calculate the height of your node from scratch, then we will
+need to make a recursive call on every descendant of that node, which could take as
+long as linear time, rather than constant time. So, storing heights in nodes means that,
+at each node, knowing the heights of subtrees (which we need for rebalancing) can be
+accomplished in constant time, not linear time.
   
   
-Question 4) 
+  
+Question 5) 
 void AVLTree::rotateLeft(AVLTreeNode * & node) {
 // no need to check for conditions, as they are supposed
 // to be checked before calling this function
