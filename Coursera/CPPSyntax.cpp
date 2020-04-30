@@ -138,3 +138,11 @@ type is an integer?
 ***
 int* x, y; y is an INT not an int pointer
 ***
+
+C++ syntax
+Suppose myVar is declared as follows: int ** myVar;. Which of the following could describe
+the variable myVar once it has been initialized?
+I. myVar is a dynamic array of integer pointers.
+II. myVar is a pointer to a dynamic array of integers.
+III. myVar is a dynamic array of dynamic arrays of integers.
+
