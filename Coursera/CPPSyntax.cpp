@@ -293,3 +293,14 @@ return 0;
 Which of the following best describes the output?
 (b) 6 and then 120
  
+MC7 (2.5pts)
+Which of the options below is the appropriate function signature for the definition of the copy
+constructor for the train class?
+template<class T>
+class train {
+private:
+// private portion of class definition here
+public:
+// public portion of class definition here
+};
+(c) template<class T> train<T>::train(const train<T> & oldTrain)
