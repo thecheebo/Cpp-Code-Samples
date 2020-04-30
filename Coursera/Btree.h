@@ -55,3 +55,16 @@ than children, each half should also have ((b+1)/2)-1 indices. But, if each half
 indices, which equals b-1 indices. Yet, our node before the split had b indices. So, we
 know there is an index left over that was not placed in either of the two halves of the
 split.
+  
+  
+  *** QUESTION ***
+  
+  (c) After performing a combine operation during B-Tree removal, why is it that we need to
+check the parent for underflow? i.e. justify that such a combine operation could have
+caused the parent to underflow.
+  
+Combining a node merges two nodes into one...so where the parent used to have two
+nodes, it now has just one. So if the parent had the minumum number of children before,
+it now has one less than the minimum number of children, because two of those children
+have been combined into one.
+
