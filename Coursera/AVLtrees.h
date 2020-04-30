@@ -1,3 +1,8 @@
+Which of the following is the strongest valid statement made about AVL trees?
+
+(b) They are height-balanced trees
+
+
 You are given the AVLTreeNode class shown on page 8 of the exam. You want to write a
 function doubleRight that has one parameter and returns nothing. The parameter will be
 of type reference-to-pointer-to-AVLTreeNode. You can assume this parameter points to the
