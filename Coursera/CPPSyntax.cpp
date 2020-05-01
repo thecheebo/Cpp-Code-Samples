@@ -314,3 +314,32 @@ delete p;
 p = NULL; // line 6  / here is the error
 
 (c) A single compiler error, on line 6
+
+ 
+ 
+ *** QUESTION ***
+ The expression p->a is equivalent to which one of the following?
+
+
+(*p).a
+
+
+***( QUYESTION ***
+int *i = new int;
+*i = 0;
+int &j = *i;
+j++;
+    it increments i
+    Correct
+Yes, j is a direct reference to the same actual integer that i points to indirectly.
+    
+    
+Correct
+The arrow operator -> accesses the right operand member in the class at the memory address of its left operand.
+    
+    *** QUESTION ***
+    
+&i
+
+Correct
+The & operator returns the address of its operand.
