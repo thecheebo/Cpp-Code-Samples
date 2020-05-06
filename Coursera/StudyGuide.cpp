@@ -16,7 +16,7 @@ Class Constructors
 Copy Constructors
 Copy Assignment Operator
 Variable Storage
-Class Destructor
+Class Destructor -inheritance
 
 ***** Week 4 *****
 Template Types
