@@ -18,7 +18,7 @@ Copy Assignment Operator
 Variable Storage
 Class Destructor -inheritance
 
-***** Week 4 *****
+***** Week 4 ****
 Template Types
 Tower of Hanoi
 Templates and Classes
