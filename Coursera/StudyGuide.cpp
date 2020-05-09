@@ -1,48 +1,48 @@
 ***** Part 2 - C++ OOP *****
 
 ***** Week 1 *****
-C++ Classes
-C++ STD/STL
+C++ Classes                     - DONE STUDYING
+C++ STD/STL                     - DONE STUDYING
 
 ***** Week 2 *****
-Stack Memory and Pointers
-Heap Memory
-Headers and Source Files
-Compiling a C++ Program
-Type Casting
+Stack Memory and Pointers       - DONE STUDYING
+Heap Memory                     - DONE STUDYING 
+Headers and Source Files        - DONE STUDYING
+Compiling a C++ Program         - DONE STUDYING
+Type Casting                    - DONE STUDYING
 
 ***** Week 3 *****
-Class Constructors
-Copy Constructors
+Class Constructors              - DONE STUDYING
+Copy Constructors               - DONE STUDYING
 Copy Assignment Operator
-Variable Storage
-Class Destructor -inheritance
+Variable Storage                - DONE STUDYING
+Class Destructor -inheritance   - DONE STUDYING
 
 ***** Week 4 ****
-Template Types
-Tower of Hanoi
-Templates and Classes
-Inhereitance
+Template Types                  - DONE STUDYING
+Tower of Hanoi                  
+Templates and Classes           - DONE STUDYING
+Inhereitance                    - DONE STUDYING
 
 
 ***** Part 2 - Ordered Data Structures *****
 
 ***** Week 1 *****
-Arrays
-Linked Memory
-Array and List Operators
-Queue
-Stack
+Arrays                          - DONE STUDYING
+Linked Memory                   - DONE STUDYING
+Array and List Operators        - DONE STUDYING
+Queue                           - DONE STUDYING
+Stack                           - DONE STUDYING
 
 ***** Week 2 *****
-Tree Terminology
-Binary Tree
-Tree Traversal
-BST
-BST Analysis
+Tree Terminology                - DONE STUDYING
+Binary Tree                     - DONE STUDYING
+Tree Traversal                  - DONE STUDYING
+BST                             - DONE STUDYING
+BST Analysis                    - DONE STUDYING
 
 ***** Week 3 *****
-Balanced-BST
+Balanced-BST                    - DONE STUDYING
 AVL
 B-Tree - [ Completed ]
 
@@ -61,11 +61,11 @@ Heap-runTime
 
 ***** Week 1 *****
 
-Hashing
-Hash Functions
+Hashing                     - DONE STUDYING 
+Hash Functions              - DONE STUDYING
 Chaining
-Probing/doubleHashing
-Analysis
+Probing/doubleHashing       - DONE STUDYING
+Analysis                    - DONE STUDYING
 Hash Tables in C++
 
 ***** Week 2 *****
