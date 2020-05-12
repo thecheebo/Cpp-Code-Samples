@@ -43,17 +43,17 @@ BST Analysis                    - DONE STUDYING
 
 ***** Week 3 *****
 Balanced-BST                    - DONE STUDYING
-AVL
-B-Tree - [ Completed ]
+AVL                             - DONE STUDYING
+B-Tree - [ Completed ]          - DONE STUDYING
 
 
 ***** Week 4 *****
 
-Heap Intro
-Heap-Insert
-Heap-RemoveMin
-Heap-BuildHeap
-Heap-runTime
+Heap Intro                     - DONE STUDYING
+Heap-Insert                  - DONE STUDYING
+Heap-RemoveMin                  - DONE STUDYING
+Heap-BuildHeap                  - DONE STUDYING
+Heap-runTime                  - DONE STUDYING
 
 
 
@@ -69,15 +69,15 @@ Analysis                    - DONE STUDYING
 Hash Tables in C++
 
 ***** Week 2 *****
-dISJOINT seTS
-Union Find
-Naive Implementation
+dISJOINT seTS                  - DONE STUDYING
+Union Find                  - DONE STUDYING
+Naive Implementation                  - DONE STUDYING
 
-Disjoin-UpTrees Implementation
+Disjoin-UpTrees Implementation                  - DONE STUDYING
 
-Run times
-Path COmpression I
-II
+Run times                  - DONE STUDYING
+Path COmpression I                  - DONE STUDYING
+II                  - DONE STUDYING
 
 
 
@@ -106,10 +106,10 @@ DFS
 
 MST
 
-Kruskal's Algorithm
+Kruskal's Algorithm                  - DONE STUDYING
 
-Prim's Algorithm
+Prim's Algorithm                  - DONE STUDYING
 
-Dijkstra's Algorithm
+Dijkstra's Algorithm                  - DONE STUDYING
 
 Landmark Path Problem
