@@ -69,15 +69,15 @@ Analysis                    - DONE STUDYING
 Hash Tables in C++
 
 ***** Week 2 *****
-dISJOINT seTS                  - DONE STUDYING
-Union Find                  - DONE STUDYING
+dISJOINT seTS                          - DONE STUDYING
+Union Find                            - DONE STUDYING
 Naive Implementation                  - DONE STUDYING
 
-Disjoin-UpTrees Implementation                  - DONE STUDYING
+Disjoin-UpTrees Implementation        - DONE STUDYING
 
-Run times                  - DONE STUDYING
-Path COmpression I                  - DONE STUDYING
-II                  - DONE STUDYING
+Run times                             - DONE STUDYING
+Path COmpression I                    - DONE STUDYING
+II                                    - DONE STUDYING
 
 
 
@@ -96,9 +96,9 @@ Adjacency List                        - DONE STUDYING
 
 ***** Week 4 *****
 
-BFS
-DFS
-MST
+BFS                                  - DONE STUDYING
+DFS                                  - DONE STUDYING
+MST                                  - DONE STUDYING
 Kruskal's Algorithm                  - DONE STUDYING
 Prim's Algorithm                     - DONE STUDYING
 Dijkstra's Algorithm                 - DONE STUDYING
