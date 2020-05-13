@@ -49,11 +49,11 @@ B-Tree - [ Completed ]          - DONE STUDYING
 
 ***** Week 4 *****
 
-Heap Intro                     - DONE STUDYING
-Heap-Insert                  - DONE STUDYING
+Heap Intro                      - DONE STUDYING
+Heap-Insert                     - DONE STUDYING
 Heap-RemoveMin                  - DONE STUDYING
 Heap-BuildHeap                  - DONE STUDYING
-Heap-runTime                  - DONE STUDYING
+Heap-runTime                    - DONE STUDYING
 
 
 
@@ -83,33 +83,24 @@ II                  - DONE STUDYING
 
 ***** Week 3 *****
 
-Graphs
-
-    Incident Edges - 
-    Degree - The count of incident edge
-
-    Adjacenct Edges - 
-
-Edge List
-
-Adjacency Matrix
-
-Adjacency List
+Graphs                                - DONE STUDYING                            
+    Incident Edges -                  - DONE STUDYING       
+    Degree -                          - DONE STUDYING    
+    The count incident edge
+    Adjacenct Edges -                 - DONE STUDYING
+Edge List                             - DONE STUDYING   
+Adjacency Matrix                      - DONE STUDYING
+Adjacency List                        - DONE STUDYING
     
     
 
 ***** Week 4 *****
 
 BFS
-
 DFS
-
 MST
-
 Kruskal's Algorithm                  - DONE STUDYING
-
-Prim's Algorithm                  - DONE STUDYING
-
-Dijkstra's Algorithm                  - DONE STUDYING
+Prim's Algorithm                     - DONE STUDYING
+Dijkstra's Algorithm                 - DONE STUDYING
 
 Landmark Path Problem
