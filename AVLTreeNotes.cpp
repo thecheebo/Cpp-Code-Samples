@@ -49,6 +49,7 @@ Generic Right-Left Rotation: (1 extra step)
  / \ / \
 t  x y
 
+
                      lowest point of imbal   -  balance fac of node in that direction
 left rotation                2                          1
 right rotation              -2                         -1
